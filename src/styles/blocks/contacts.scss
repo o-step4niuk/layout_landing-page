@@ -1,0 +1,94 @@
+.contacts {
+  &__block {
+    row-gap: 48px;
+
+    @include page-grid;
+  }
+
+  &__form {
+    grid-column: span 2;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 5;
+    }
+
+    &--input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: $form-elements-padding;
+      border: none;
+      border-radius: $form-elements-radius;
+      background-color: $form-background;
+      margin-bottom: 16px;
+
+      &::placeholder {
+        font-size: 14px;
+        font-weight: $font-weight-regular;
+        line-height: 20px;
+      }
+    }
+
+    &--textarea {
+      box-sizing: border-box;
+      width: 100%;
+      grid-column: span 2;
+      font-family: Popins, sans-serif;
+      padding: $form-elements-padding;
+      border: none;
+      border-radius: $form-elements-radius;
+      background-color: $form-background;
+      margin-bottom: 32px;
+    }
+
+    &--button {
+      box-sizing: border-box;
+      width: 100%;
+      grid-column: span 2;
+      padding-block: 14.5px;
+      border: none;
+      border-radius: $form-elements-radius;
+      background-color: $color-white;
+    }
+  }
+
+  &__info {
+    grid-column: span 2;
+
+    @include on-tablet {
+      grid-column: 4 / 7;
+    }
+
+    @include on-desktop {
+      grid-column: 8 / 12;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    &--name {
+      font-size: 14px;
+      font-weight: $font-weight-regular;
+      line-height: 140%;
+      margin: 0;
+      color: $color-white;
+    }
+
+    &--link {
+      font-size: 16px;
+      font-weight: $font-weight-medium;
+      line-height: 140%;
+      margin: 0;
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+}
