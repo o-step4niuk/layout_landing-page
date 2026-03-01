@@ -2,19 +2,15 @@
   background-size: cover;
   background-image: url('../assets/images/header-bg-mobile.png');
   background-position: right top;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  @include on-tablet {
+    background-position: center;
+  }
 
   &__content {
-    height: 100vh;
-
-    @include on-tablet {
-      height: 628px;
-      background-position: center;
-    }
-
-    @include on-desktop {
-      height: 711px;
-      background-position: center;
-    }
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;

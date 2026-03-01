@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link rel="icon" href="src/assets/icons/favicon.svg">
     <title>MyBIKE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -35,7 +36,9 @@
               />
             </a>
             <div class="top-bar__icons">
-              <a href="#" class="icon icon--phone"></a>
+              <a href="#" class="icon icon--phone">
+                <span class="icon__number">+1 234 555-55-55</span>
+              </a>
               <a href="#menu" class="icon icon--menu"></a>
             </div>
           </div>
@@ -80,10 +83,10 @@
               </li>
             </ul>
           </nav>
-          <a href="tel:+1 234 5555-55-55" class="menu__phone-number">
+          <a href="tel:+123455555555" class="menu__phone-number">
             +1 234 5555-55-55
           </a>
-          <a href="tel:+1 234 5555-55-55" class="menu__test-ride">
+          <a href="tel:+123455555555" class="menu__test-ride">
             Book a test ride
           </a>
         </div>
@@ -240,47 +243,57 @@
 
             <div class="contacts__block">
               <form
+                onsubmit="this.reset(); return false;"
                 action="#"
                 method="post"
                 class="contacts__form"
+                name="contacts"
               >
                 <input
                   type="text"
                   name="username"
+                  id="username"
                   class="contacts__form--input"
                   placeholder="Name"
                 >
                 <input
                   type="email"
                   name="email"
+                  id="email"
                   class="contacts__form--input"
                   placeholder="Email"
                 >
                 <textarea
                   name="message"
-                  id="#"
+                  id="message"
                   class="contacts__form--textarea"
                   placeholder="Message"
                 ></textarea>
                 <input
-                  type="button"
+                id="submit"
+                  type="submit"
                   value="Send"
                   class="contacts__form--button"
                 >
               </form>
+
               <div class="contacts__info">
                 <ul class="contacts__list">
                   <li class="contacts__item">
                     <p class="contacts__item--name">Phone</p>
-                    <a class="contacts__item--link" href="tel:+1 234 5555-55-55">+1 234 5555-55-55</a>
+                    <a class="contacts__item--link" href="tel:+123455555555">+1 234 5555-55-55</a>
                   </li>
                   <li class="contacts__item">
                     <p class="contacts__item--name">Email</p>
-                    <a class="contacts__item--link" href="email:hello@miami.com">hello@miami.com</a>
+                    <a class="contacts__item--link" href="mailto:hello@miami.com">hello@miami.com</a>
                   </li>
                   <li class="contacts__item">
                     <p class="contacts__item--name">Address</p>
-                    <a class="contacts__item--link">
+                    <a
+                      class="contacts__item--link"
+                      target="_blank"
+                      href="https://www.google.com/maps"
+                    >
                       400 first ave.<br>
                       suite 700<br>
                       Minneapolis, MN 55401
@@ -295,6 +308,8 @@
       </div>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__bg"></div>
+    </footer>
   </body>
 </html>
