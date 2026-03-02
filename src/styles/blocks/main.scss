@@ -3,16 +3,15 @@
 
   &__content {
     display: grid;
-    padding-block: 60px 320px;
+    padding-block: 60px 120px;
 
     @include on-tablet {
-      padding-top: 120px;
-      padding-bottom: calc(480px + 120px);
+      padding-block: 120px;
     }
 
     @include on-desktop {
-      padding-top: 120px;
-      padding-bottom: calc(555px + 182px);
+      padding-block: 120px 182px;
+
     }
   }
 }
